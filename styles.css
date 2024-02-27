@@ -1,95 +1,172 @@
-/* navbar */
-ul {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ADBC9F;
+    color: white;
 }
 
-a {
-  float: right;
+header {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
 }
 
-a {
-  display: block;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
+header h1 {
+    margin: 0;
+    font-size: 60px;
+    color: #FFF;
 }
 
-a:hover {
-  background-color: #1a1718;
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-a{
-  background-color: beige;
-  color: blue;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.6435-9/118007885_946080832571101_1776406030291214443_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7a1959&_nc_eui2=AeGdLqE4DMzEQEU9MxFTZRpVe1nnvLAbPCZ7Wee8sBs8Jon80XWobkjzuUNTrEZcTDL7oN82oixC8JoGSkFwMQvo&_nc_ohc=2T_GZAJYVE0AX_YMo3b&_nc_ht=scontent.fmnl17-2.fna&oh=00_AfDF6bvz5R3hRbSK4jq4lGbQYJHzqb7t3tyBgFnrdqexBA&oe=65E57FC7);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  filter: blur(4px);
-  z-index: -1;
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: #000000;
+    height: 100vh; 
+    justify-content: center;
+    align-items:center;
+}
+
+.hero-content {
+    max-width: 600px; 
+    padding: 0 20px;
+}
+
+.hero::before {
+    content: '';
+    background-image: url('https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/428659216_1820824005096775_3495823052613301958_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeEZrGD5W7S1Rl04U1yBc3MltQ7ouVNzx5C1Dui5U3PHkKeNoBYfs4UjusYPPxDtRYgx548WCxe_DwsfhIX2IZXX&_nc_ohc=VzXMAKlDXFQAX-f52XG&_nc_ht=scontent.fmnl17-2.fna&oh=00_AfDfUhDY2THGOVbotcs79aUnXQ8UPx1dHxBlRWZH_EG17g&oe=65E311E3');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.hero h2 {
+    padding-top: 20%;
+    font-size: 40px;
+    color: #000000;
+}
+
+.hero p {
+    font-size: 20px;
+    display: block;
+    
+}
+
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #436850;
+}
+
+.about p {
+    padding: 0 130px;
+}
+
+.about li {
+    margin-bottom: 10px;
 }
 
 
-/* first SEction */
-#fsize {
-  font-size: 50px;
-  border-style: double;
-  animation: color-change is infinite;
+.events {
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
 }
 
-#margs {
-  margin-top: 150px;
+.events::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://frontofficesports.com/wp-content/uploads/2020/06/Beta-Key-Art_VALORANT-scaled.jpg');
+    opacity: 0.9;
+    z-index: -1;
+    background-size: cover;
 }
 
-.upperS {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: rgb(0, 26, 255);
-}
-/* sencond sec */
-.secSection {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #F9EFDB;
+.events ul li {
+    margin-bottom: 10px;
 }
 
-#abt {
-  color: rgb(0, 0, 0);
-  margin-top: 100px;
+
+.Info {
+    position: relative; 
+    padding: 50px 20px;
+    text-align: center;
 }
 
-#hello{
-  color: rgb(6, 186, 241);
+.Info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.riotgames.com/darkroom/1440/8f9e1eb219ffe4626e56c2f899a8cbd2:87a5c9172cb369df9fb0aef8513dfb09/small-logo-red-16x9.png");
+    background-size: cover;
+    opacity: 0.2; 
+    z-index: -1; 
 }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.2s;
-  align-items: left;
-  display: flex;
-  flex-direction: column;
+.Info p {
+    padding: 50px 130px;
+    color: #FFF;
 }
 
-.container {
-  background-color: #F9EFDB;
+.projects h2, p {
+    color: black;
 }
+.achievements {
+    padding: 50px 20px;
+    text-align: center;
+    color: black;
+}
+
+.achievements h2 {
+    margin-bottom: 30px;
+}
+
+.achievement-card {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-card h3 {
+    margin-top: 0;
+}
+
+.achievement-card p {
+    margin-bottom: 0;
+}
+
