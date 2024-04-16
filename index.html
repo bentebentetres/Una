@@ -11,10 +11,11 @@
         <h1>MY PORTFOLIO</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" onclick="animateNavigation(this)">Home</a></li>
+                <li><a href="#about" onclick="animateNavigation(this)">About</a></li>
+                <li><a href="#projects" onclick="animateNavigation(this)">Projects</a></li>
+                <li><a href="#contact" onclick="animateNavigation(this)">Contact</a></li>
+                <button onclick="toggleDarkMode()"> Dark Mode</button>
             </ul>
         </nav>
     </header>
@@ -25,28 +26,30 @@
     </section>
 
     <section class="about" id="about">
-        <h2>About Me</h2>
-        <p>I'm a 2nd year college student and trying my best
-            to reach 3rd year without failed or inc grades.
-            My hobbies are, watching, playing Online games, sometimes
-            going to gym or play basketball, but mostly I like to sleep.
-        </p>
-        <p>
-
-        </p>
-        <h2>My Skills</h2>
-            <li>Basic Python knowledge</li>
-            <li>HTML and CSS</li>
-            <li>Drawing</li>
-            <li>Good at video games</li>
-
+        <div class="about-content" onmouseover="changeBackgroundColor(this)" onmouseout="resetBackgroundColor(this)">
+            <h2>About Me</h2>
+            <p>I'm a 2nd year college student and trying my best
+                to reach 3rd year without failed or inc grades.
+                My hobbies are, watching, playing Online games, sometimes
+                going to gym or play basketball, but mostly I like to sleep.
+            </p>
+            <h2>My Skills</h2>
+            <ul class="skills-list">
+                <li>Basic Python knowledge</li>
+                <li>HTML and CSS</li>
+                <li>Drawing</li>
+                <li>Good at video games</li>
+            </ul>
+        </div>
     </section>
 
     <section class="projects" id="projects">
         <h2>Projects</h2>
         <div class="project">
+            <p>Here's one of my projects for this subject (CC14)</p>
             <h3><a href="https://bentebentetres.github.io/INVITATION/">Portfolio Website</a></h3>
-            <p>Here's one of my project in this subject(CC14)</p>
+        </div>
+        
     </section>
 
     <section class="achievements" id="achievements">
@@ -66,8 +69,12 @@
         <a href="https://www.facebook.com/watcher.shane01/" target="_blank">Visit my Facebook profile</a>
     </section>
 
-    
-    
+<script>
+    function toggleDarkMode() {
+        var body = document.body;
+        body.classList.toggle("dark-mode");
+    }
+</script>
 
 </body>
 </html>
