@@ -49,8 +49,7 @@ nav ul li a {
 
 .hero::before {
     content: '';
-    background-image: url('https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/428659216_1820824005096775_3495823052613301958_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeEZrGD5W7S1Rl04U1yBc3MltQ7ouVNzx5C1Dui5U3PHkKeNoBYfs4UjusYPPxDtRYgx548WCxe_DwsfhIX2IZXX&_nc_ohc=VzXMAKlDXFQAX-f52XG&_nc_ht=scontent.fmnl17-2.fna&oh=00_AfDfUhDY2THGOVbotcs79aUnXQ8UPx1dHxBlRWZH_EG17g&oe=65E311E3');
-    background-size: cover;
+    background-image: url("mero.jpg");
     background-position: center;
     position: absolute;
     top: 0;
@@ -59,6 +58,7 @@ nav ul li a {
     height: 100%;
     opacity: 0.6;
     z-index: -1;
+    background-repeat: no-repeat;
 }
 
 .hero h2 {
@@ -77,6 +77,34 @@ nav ul li a {
     padding: 50px 20px;
     text-align: center;
     background-color: #436850;
+    color: white;
+}
+
+.about:hover {
+    background-color: var(--random-color);
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.skills-list li::before {
+    content: "•"; 
+    color: #ffc107; 
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
 .about p {
@@ -168,5 +196,40 @@ nav ul li a {
 
 .achievement-card p {
     margin-bottom: 0;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode header {
+    background-color: #111;
+}
+
+.dark-mode nav ul li a {
+    color: white;
+}
+
+.dark-mode .achievement-card {
+    background-color: #444;
+    color: white;
+}
+
+.dark-mode .achievement-card:hover {
+    background-color: #666;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate-nav {
+    animation: slideIn 0.5s ease forwards;
 }
 
